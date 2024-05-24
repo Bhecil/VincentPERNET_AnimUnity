@@ -1,4 +1,7 @@
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.AI;
+using UnityEngine.UIElements;
 
 public enum IAState
 {
@@ -17,6 +20,14 @@ public class IAController : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private IAState _state;
+
+    private NavMeshAgent _agent;
+    private Vector3 _nextDestination;
+
+    private void Start()
+    {
+        _agent = GetComponent<NavMeshAgent>();
+    }
 
     private void Update()
     {
@@ -64,8 +75,17 @@ public class IAController : MonoBehaviour
     {
         if (_state == IAState.Patrol)
         {
-
+            if (_agent.destination != null && _agent.remainingDistance > 1f)
+            {
+                SetNextDestination();
+            }
         }
+    }
+
+    private void SetNextDestination()
+    {
+        _nextDestination = new Vector3();
+        _agent.SetDestination(_nextDestination);
     }
 
 }

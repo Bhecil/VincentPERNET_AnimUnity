@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2837479395265247415}
+  - component: {fileID: 6576524611541987527}
+  - component: {fileID: 8356409500778856321}
+  - component: {fileID: 4237823681551862263}
   m_Layer: 0
   m_Name: Jogger
   m_TagString: Untagged
@@ -32,6 +35,58 @@ Transform:
   - {fileID: 466544259246644994}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!195 &6576524611541987527
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701429650867367717}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
+--- !u!114 &8356409500778856321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701429650867367717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d37a6094054a9c4284f5599632ae801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  IsPlayerNear: 0
+  IsPlayerSeen: 0
+  _animator: {fileID: 0}
+--- !u!114 &4237823681551862263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8701429650867367717}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b9fb9089a95dbe45828f925c1ed75ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _player: {fileID: 0}
+  _pawn: {fileID: 2837479395265247415}
+  _range: 3
 --- !u!1001 &140674770337904873
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -80,10 +135,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -1153839659810198550, guid: 0db93c6747fdefe44862c5decb8646ff, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.13
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0db93c6747fdefe44862c5decb8646ff, type: 3}
       propertyPath: m_Name
       value: JoggerModel
       objectReference: {fileID: 0}
+    - target: {fileID: 5866666021909216657, guid: 0db93c6747fdefe44862c5decb8646ff, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 417d70f9a5b69ea48ae73d98feaf7e72, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
