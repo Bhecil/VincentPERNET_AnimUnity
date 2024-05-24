@@ -531,6 +531,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 417d70f9a5b69ea48ae73d98feaf7e72, type: 2}
+    - target: {fileID: 7930691626548646659, guid: cb923663cf3f63e419b966cb187e99d2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.13
+      objectReference: {fileID: 0}
     - target: {fileID: 8701429650867367717, guid: cb923663cf3f63e419b966cb187e99d2, type: 3}
       propertyPath: m_Name
       value: Jogger
